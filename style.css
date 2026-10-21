@@ -1,0 +1,169 @@
+/* Teemamuuttujat: Tumman sininen (oletus) */
+[data-theme="dark"] {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --text-color: #ffffff;
+    --nav-bg: rgba(15, 23, 42, 0.95);
+    --border-color: #334155;
+    --table-bg: #1e293b;
+    --table-text: #ffffff;
+    --footer-bg: #0b1120;
+    --input-bg: #1e293b;
+}
+
+/* Teemamuuttujat: Vaalea sininen */
+[data-theme="light"] {
+    --bg-main: #e0f2fe;
+    --bg-card: #ffffff;
+    --text-color: #0f172a;
+    --nav-bg: rgba(224, 242, 254, 0.95);
+    --border-color: #bae6fd;
+    --table-bg: #ffffff;
+    --table-text: #0f172a;
+    --footer-bg: #bae6fd;
+    --input-bg: #f8fafc;
+}
+
+/* Yleiset teeman mukaiset tyylit */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigointipalkki */
+.navbar {
+    background-color: var(--nav-bg) !important;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: var(--text-color) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #0d6efd !important;
+}
+
+/* Teemapainikkeen tyylitys */
+#theme-toggle-btn {
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+#theme-toggle-btn:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+    border-color: #0d6efd;
+}
+
+/* Hero-osio */
+.hero {
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    padding-top: 80px;
+    transition: background-color 0.3s ease;
+}
+
+.hero p {
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* Alempi sisältö */
+.main-content-wrapper {
+    background-color: var(--bg-main);
+    padding-bottom: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+.bg-card {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+}
+
+/* Kuvan reunat */
+.image-wrapper {
+    border-color: var(--border-color) !important;
+}
+
+.ohjelmointi-kuva {
+    transition: transform 0.4s ease;
+}
+
+.image-wrapper:hover .ohjelmointi-kuva {
+    transform: scale(1.03);
+}
+
+/* Taulukko */
+.table-responsive {
+    background-color: var(--table-bg);
+    border-color: var(--border-color) !important;
+    transition: background-color 0.3s ease;
+}
+
+.table {
+    color: var(--table-text) !important;
+    margin-bottom: 0;
+}
+
+.table th, .table td {
+    color: var(--table-text) !important;
+    background-color: transparent !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Lomake */
+.form-control {
+    background-color: var(--input-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+.form-control:focus {
+    background-color: var(--input-bg) !important;
+    color: var(--text-color) !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+    border-color: #0d6efd !important;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+/* Scroll Reveal */
+.reveal-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
